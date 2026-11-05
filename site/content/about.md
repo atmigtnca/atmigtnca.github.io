@@ -20,3 +20,14 @@ description = "서종호의 학교와 연구실, 관심 분야, 학습 목표, �
 1. CNCF Kubestronaut 과정을 준비하면서 쿠버네티스 운영 기본기를 채운다.
 2. OpenStack 위 쿠버네티스 방식으로 Magnum과 Cluster API를 비교하고, 고른 이유를 결정 기록으로 남긴다.
 3. 고른 방식을 학생 프로젝트 하나에 먼저 시험 적용한다. 이때 Ceph가 쿠버네티스의 영구 볼륨 저장소가 된다.
+
+## 쓰는 기술과 사용 사례
+
+| 기술 | 어디에 썼나 |
+|---|---|
+| Kolla-Ansible | JCloud 재구축에서 OpenStack 서비스를 컨테이너로 배포했다. 설정을 `globals.yml`과 인벤토리 한곳에 모으는 것이 이 도구를 고른 이유였다. |
+| Ceph, cephadm | 재구축 때 VM 디스크, 이미지, 볼륨을 모두 Ceph에 모았다. cephadm으로 시드 클러스터를 세우고, 볼륨에서 부팅하는 VM을 띄워 콘솔 로그인 화면까지 확인했다. |
+| Linux (Ubuntu 24.04) | 노드마다 OS를 다시 설치하고 Kolla와 Ceph 노드로 편입했다. |
+| fio | 저장장치 등급(엔터프라이즈 SSD, 일반 SSD, HDD)을 나눌 때 동기 쓰기 성능을 실측했다. |
+| Git, GitHub Actions | 이 사이트를 main에 push하면 Actions가 Hugo로 빌드해 GitHub Pages에 배포한다. |
+| AI 코딩 에이전트 | Claude Code 같은 에이전트로 실측 결과와 결정 기록을 정리하고, 이 사이트 작업에도 썼다. 어디에 썼는지는 [이 사이트에 대해](colophon/)에 적었다. |
