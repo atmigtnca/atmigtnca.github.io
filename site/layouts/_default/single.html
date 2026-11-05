@@ -30,9 +30,14 @@
   </dl>
   {{- end }}
   {{- if .Params.toc }}
-  <div class="toc">
+  {{- /* 좁은 화면은 접어 두는 목차, 넓은 화면은 왼쪽에 고정한 목차. 화면마다 하나만 보인다 */}}
+  <details class="toc toc-narrow">
+    <summary>목차</summary>
+    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav aria-label="이 페이지 목차">` | safeHTML }}
+  </details>
+  <div class="toc toc-wide">
     <p class="toc-title" id="toc-title">목차</p>
-    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav id="TableOfContents" aria-labelledby="toc-title">` | safeHTML }}
+    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav aria-labelledby="toc-title">` | safeHTML }}
   </div>
   {{- end }}
   {{ .Content }}

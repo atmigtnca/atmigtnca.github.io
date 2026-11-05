@@ -442,8 +442,32 @@ footer a {
   text-decoration: underline;
 }
 
+.toc-wide {
+  display: none;
+}
+
+.toc-narrow {
+  border-block: 1px solid var(--rule);
+}
+
+.toc-narrow summary {
+  padding: 0.625rem 0;
+  color: var(--ink-2);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.toc-narrow nav {
+  padding-bottom: 0.5rem;
+}
+
 @media (min-width: 78rem) {
-  .toc {
+  .toc-narrow {
+    display: none;
+  }
+
+  .toc-wide {
+    display: block;
     position: fixed;
     top: 7rem;
     left: max(1.5rem, calc(50% - 22rem - 15rem));
