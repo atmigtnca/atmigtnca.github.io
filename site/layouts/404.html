@@ -1,10 +1,10 @@
 {{ define "title" }}페이지를 찾을 수 없음 | {{ site.Title }}{{ end }}
 
 {{ define "main" }}
-<h1>페이지를 찾을 수 없습니다</h1>
-<p>주소가 바뀌었거나 없는 페이지입니다. 아래 링크에서 다시 찾아 주세요.</p>
+<h1>없는 페이지</h1>
+<p>주소가 바뀌었거나 없는 페이지다. 아래에서 다시 찾을 수 있다.</p>
 <ul>
-  <li><a href="{{ "" | relURL }}">처음 화면</a></li>
+  <li><a href="{{ "" | relURL }}">처음으로</a></li>
   <li><a href="{{ "about/" | relURL }}">소개</a></li>
   <li><a href="{{ "projects/" | relURL }}">활동</a></li>
 </ul>
