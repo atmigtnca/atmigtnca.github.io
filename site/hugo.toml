@@ -1,17 +1,14 @@
 # 배포 주소. Actions에서는 pages.json과 SITE_BASE_URL이 같은 값을 넣는다.
 baseURL = "https://atmigtnca.github.io/"
 
-# The name of this wonderful theme ;-).
-
-
-# Basic metadata configuration for your blog.
+# 사이트 기본 정보
 title = "서종호"
 author = "서종호"
 copyright = "© 2026 서종호"
 locale = "ko"
 defaultContentLanguage = "ko"
 
-# Generate a nice robots.txt for SEO
+# 검색엔진용 robots.txt 생성
 enableRobotsTXT = true
 
 # 태그를 쓰지 않으므로 태그 목록 페이지를 만들지 않는다.
@@ -32,29 +29,13 @@ disableKinds = ["taxonomy", "term"]
     weight = 30
 
 [params]
-  # The "description" of your website. This is used in the meta data of your generated html.
+  # 페이지에 설명이 없을 때 meta description으로 쓴다.
   description = "전북대학교 컴퓨터인공지능학부 학생 서종호의 포트폴리오. 연구실 프라이빗 클라우드 JCloud를 운영하고 2026년 여름에 다시 지은 기록을 정리했다."
 
+  # Open Graph site_name
   title = "서종호 포트폴리오"
 
-  # This theme will, by default, inject a made-with-line at the bottom of the page.
-  # You can turn it off, but we would really appreciate if you don’t :-).
-  # hideMadeWithLine = true
-
-  # By default, if you want to read more than one blog post you have to always go
-  # back to the /blog page.
-  # By enabling this feature each blog post will have at the end a navigator
-  # enablePostNavigator = true
-
-  # By default, this theme displays dates with a format like "02 Jan, 2006", but
-  # you can customize it by setting the `dateFormat` param in your site's config
-  # file. See [Hugo's Format function docs](https://gohugo.io/functions/format/)
-  # for details. An example TOML config that uses [ISO
-  # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
-  # dateFormat = "2006-01-02"
-
-# Configure markup highlighter to match "Bearblog" aesthetics, see
-# https://gohugo.io/configuration/markup/#highlight
+# 목차는 h2만, 코드 강조는 테마 기본 색
 [markup]
   [markup.tableOfContents]
     startLevel = 2
