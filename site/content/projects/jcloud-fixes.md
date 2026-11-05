@@ -2,6 +2,7 @@
 title = "JCloud 이주 뒤 고친 화면 문제"
 description = "새 JCloud의 Skyline 콘솔에서 학생용 생성 화면이 사라진 문제와 할당량 부족 경고가 잘못 뜨던 문제를 원인까지 추적한 기록"
 date = 2026-08-31
+lastmod = 2026-11-05
 weight = 2
 [params]
   period = "2026년 8월"
