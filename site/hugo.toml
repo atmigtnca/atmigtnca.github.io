@@ -1,15 +1,15 @@
-# Base URL used when generating links to your pages
-# Set to the URL for your site
-baseURL = "https://example.com"
+# 배포 주소. Actions에서는 pages.json과 SITE_BASE_URL이 같은 값을 넣는다.
+baseURL = "https://atmigtnca.github.io/"
 
 # The name of this wonderful theme ;-).
 
 
 # Basic metadata configuration for your blog.
-title = "Hugo ʕ•ᴥ•ʔ Bear Blog"
-author = "Jane Doe"
-copyright = "Copyright © 2020, Jane Doe."
-languageCode = "en-US"
+title = "서종호"
+author = "서종호"
+copyright = "© 2026 서종호"
+locale = "ko"
+defaultContentLanguage = "ko"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
