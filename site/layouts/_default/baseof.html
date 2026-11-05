@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default "ko" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{- partial "favicon.html" . -}}
+  <title>{{- block "title" . }}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}{{- end }}</title>
+  {{- partial "seo_tags.html" . -}}
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+  {{ end -}}
+  {{- partial "style.html" . -}}
+  {{- partial "custom_head.html" . -}}
+</head>
+
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="top">
+    {{- partial "header.html" . -}}
+  </header>
+  <main id="main" tabindex="-1">
+    {{- block "main" . }}{{- end }}
+  </main>
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+  {{- partial "custom_body.html" . -}}
+</body>
+
+</html>
