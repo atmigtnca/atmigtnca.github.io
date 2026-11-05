@@ -9,7 +9,7 @@ description = "이 사이트를 만든 도구, 테마 출처와 라이선스, �
 
 ## 테마 출처
 
-[Hugo ʕ•ᴥ•ʔ Bear Blog](https://github.com/janraasch/hugo-bearblog) (Jan Raasch, MIT License)를 바탕으로 했다. 테마 원본은 저장소의 `site/themes/template/`에 라이선스 파일과 함께 그대로 두고, 바꾼 부분은 `site/layouts/`에 따로 덮어썼다.
+[Hugo Bear Blog](https://github.com/janraasch/hugo-bearblog) (Jan Raasch, MIT License)를 바탕으로 했다. 테마 원본은 저장소의 `site/themes/template/`에 라이선스 파일과 함께 그대로 두고, 바꾼 부분은 `site/layouts/`에 따로 덮어썼다.
 
 ## 직접 만든 부분과 AI가 만든 부분
 
