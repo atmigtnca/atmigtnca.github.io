@@ -16,6 +16,6 @@ description = "전북대학교 컴퓨터인공지능학부 서종호. OSLAB 학�
 
 ## 대표 활동
 
-[JCloud 2026년 여름 재구축({{< relref "projects/jcloud-rebuild" >}}) — 2026년 7월부터 9월까지. 흩어진 수동 설정으로 운영하던 클라우드를 Kolla-Ansible과 Ceph 기반으로 새로 짓고 기존 자원을 옮겼다.
+[JCloud 2026년 여름 재구축]({{< relref "projects/jcloud-rebuild" >}}) — 2026년 7월부터 9월까지. 흩어진 수동 설정으로 운영하던 클라우드를 Kolla-Ansible과 Ceph 기반으로 새로 짓고 기존 자원을 옮겼다.
 
-더 자세한 소개는 [소개({{< relref "about" >}})에, 활동 목록은 [활동({{< relref "projects" >}})에 있다.
+더 자세한 소개는 [소개]({{< relref "about" >}})에, 활동 목록은 [활동]({{< relref "projects" >}})에 있다.
