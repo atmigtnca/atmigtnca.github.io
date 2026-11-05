@@ -255,3 +255,70 @@ code {
 .status[data-state="ongoing"] {
   color: var(--ongoing);
 }
+
+/* 표: 넓은 화면은 줄 선 표, 좁은 화면은 행마다 쌓는다 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+th,
+td {
+  padding: 0.625rem 0.75rem 0.625rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+td:first-child {
+  min-width: 6.5rem;
+  font-weight: 500;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 40rem) {
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  table {
+    border-top: 2px solid var(--ink);
+  }
+
+  tr {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  td {
+    padding: 0;
+    border: 0;
+  }
+
+  td:first-child {
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+  }
+}
