@@ -339,6 +339,21 @@ td:first-child {
     margin-bottom: 0.25rem;
     font-weight: 700;
   }
+
+  /* 세 열 이상인 표는 쌓인 칸 앞에 열 이름을 붙인다 */
+  table:has(th:nth-child(3)) td:not(:first-child) {
+    position: relative;
+    padding-left: 3.25rem;
+  }
+
+  table:has(th:nth-child(3)) td:not(:first-child)::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    color: var(--ink-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
 }
 
 /* 활동 목록 */
