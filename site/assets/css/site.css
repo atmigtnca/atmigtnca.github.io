@@ -464,3 +464,34 @@ footer a {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* 인쇄: 메뉴와 목차는 빼고 본문만, 흰 종이에 검은 글자 */
+@media print {
+  :root {
+    --paper: #ffffff;
+    --surface: #ffffff;
+    --ink: #000000;
+    --ink-2: #333333;
+  }
+  html {
+    font-size: 90%;
+  }
+  .skip-link,
+  header nav,
+  .toc,
+  footer a[href="#top"] {
+    display: none !important;
+  }
+  a {
+    color: inherit;
+  }
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  figure,
+  .record,
+  tr {
+    break-inside: avoid;
+  }
+}
