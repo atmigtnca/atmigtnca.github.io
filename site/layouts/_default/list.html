@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<ul class="entries">
+  {{- range .Pages.ByWeight }}
+  {{- $p := . }}
+  <li>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{- with .Params.period }}
+    <p class="entry-meta">{{ . }}{{ with $p.Params.status }} <span class="status">{{ . }}</span>{{ end }}</p>
+    {{- end }}
+    {{- with .Description }}<p>{{ . }}</p>{{ end }}
+  </li>
+  {{- else }}
+  <li>아직 올린 글이 없다.</li>
+  {{- end }}
+</ul>
+{{ end }}
