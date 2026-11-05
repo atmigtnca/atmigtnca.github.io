@@ -1,0 +1,7 @@
+<figure class="compare">
+  <div class="compare-pair">
+    <img src="{{ .Get "before" | relURL }}" alt="{{ .Get "beforeAlt" }}" width="400" height="416" loading="lazy">
+    <img src="{{ .Get "after" | relURL }}" alt="{{ .Get "afterAlt" }}" width="400" height="416" loading="lazy">
+  </div>
+  <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>

@@ -434,3 +434,32 @@ footer a {
     width: 12rem;
   }
 }
+
+/* 전후 비교 그림: 넓으면 나란히, 좁으면 위아래 */
+.compare {
+  margin: 2rem 0;
+}
+
+.compare-pair {
+  display: grid;
+  gap: 1rem;
+}
+
+.compare img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+.compare figcaption {
+  margin-top: 0.625rem;
+  color: var(--ink-2);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 40rem) {
+  .compare-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}

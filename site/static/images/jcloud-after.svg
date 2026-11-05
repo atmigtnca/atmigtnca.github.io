@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="'IBM Plex Sans KR', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
-  <rect width="400" height="392" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="'IBM Plex Sans KR', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <rect width="400" height="416" fill="#ffffff"/>
   <rect x="0" y="0" width="400" height="3" fill="#23663a"/>
-  <text x="20" y="38" font-size="18" font-weight="700" fill="#18202b">재구축 후: OpenStack Gazpacho</text>
-  <rect x="20" y="58" width="360" height="58" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="34" y="80" font-size="12.5" fill="#4b5563">사용자 화면</text>
-  <text x="34" y="102" font-size="14.5" fill="#18202b">Skyline (관리용 Horizon은 따로)</text>
-  <rect x="20" y="124" width="360" height="58" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="34" y="146" font-size="12.5" fill="#4b5563">OpenStack 서비스</text>
-  <text x="34" y="168" font-size="14.5" fill="#18202b">Kolla-Ansible이 띄운 컨테이너</text>
-  <rect x="20" y="190" width="360" height="58" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="34" y="212" font-size="12.5" fill="#4b5563">컨트롤러</text>
-  <text x="34" y="234" font-size="14.5" fill="#18202b">3대, Ubuntu 24.04</text>
-  <rect x="20" y="256" width="360" height="58" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="34" y="278" font-size="12.5" fill="#4b5563">설정</text>
-  <text x="34" y="300" font-size="14.5" fill="#18202b">globals.yml과 인벤토리 한곳, Git 관리</text>
-  <rect x="20" y="322" width="360" height="58" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="34" y="344" font-size="12.5" fill="#4b5563">VM 디스크, 볼륨, 이미지</text>
-  <text x="34" y="366" font-size="14.5" fill="#18202b">Ceph Squid (cephadm)</text>
+  <text x="20" y="38" font-size="19" font-weight="700" fill="#18202b">재구축 후: OpenStack Gazpacho</text>
+  <rect x="16" y="56" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
+  <text x="28" y="80" font-size="13.5" fill="#4b5563">사용자 화면</text>
+  <text x="28" y="106" font-size="16.5" fill="#18202b">Skyline (관리용 Horizon은 따로)</text>
+  <rect x="16" y="126" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
+  <text x="28" y="150" font-size="13.5" fill="#4b5563">OpenStack 서비스</text>
+  <text x="28" y="176" font-size="16.5" fill="#18202b">Kolla-Ansible이 띄운 컨테이너</text>
+  <rect x="16" y="196" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
+  <text x="28" y="220" font-size="13.5" fill="#4b5563">컨트롤러</text>
+  <text x="28" y="246" font-size="16.5" fill="#18202b">3대, Ubuntu 24.04</text>
+  <rect x="16" y="266" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
+  <text x="28" y="290" font-size="13.5" fill="#4b5563">설정</text>
+  <text x="28" y="316" font-size="16.5" fill="#18202b">globals.yml과 인벤토리 한곳, Git 관리</text>
+  <rect x="16" y="336" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
+  <text x="28" y="360" font-size="13.5" fill="#4b5563">VM 디스크, 볼륨, 이미지</text>
+  <text x="28" y="386" font-size="16.5" fill="#18202b">Ceph Squid (cephadm)</text>
 </svg>

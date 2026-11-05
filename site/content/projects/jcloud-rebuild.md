@@ -21,6 +21,15 @@ JCloud는 OSLAB이 학생 실습과 연구용 VM을 내주는 OpenStack 클라�
 
 그래서 목표를 이렇게 정했다. 컨테이너로 바꾸는 것 자체가 목적이 아니라, **설정을 한곳에 선언해 두고 그 상태로 자동으로 맞춰지게 하는 것**이다. 이후의 모든 선택을 이 기준으로 판단했다.
 
+
+{{< compare
+  before="images/jcloud-before.svg"
+  beforeAlt="재구축 전 구성. 사용자 화면은 Horizon, OpenStack 서비스는 서버마다 패키지로 직접 설치, 고가용성은 pacemaker와 DRBD였고 복제가 끊긴 상태, 설정은 노드별 /etc와 pacemaker와 수동 백업에 흩어져 있음, VM 디스크는 서버마다 로컬 디스크."
+  after="images/jcloud-after.svg"
+  afterAlt="재구축 후 구성. 사용자 화면은 Skyline이고 관리용 Horizon은 따로 둠, OpenStack 서비스는 Kolla-Ansible이 띄운 컨테이너, 컨트롤러 3대와 Ubuntu 24.04, 설정은 globals.yml과 인벤토리 한곳에서 Git으로 관리, VM 디스크와 볼륨과 이미지는 Ceph Squid."
+  caption="그림 1. 재구축 전(왼쪽)과 후(오른쪽). 테두리가 굵은 칸이 운영하며 가장 문제가 된 부분이다."
+>}}
+
 ## 내가 맡은 일 {#role}
 
 **혼자 진행한 재구축이다.** 설계, 구축, 이관, 운영까지 전부 내가 했다.
