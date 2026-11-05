@@ -25,10 +25,6 @@ ignoreErrors = ["error-disable-taxonomy"]
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "전북대학교 컴퓨터인공지능학부 학생 서종호의 포트폴리오. 연구실 프라이빗 클라우드 JCloud를 운영하고 2026년 여름에 다시 지은 기록을 정리했다."
 
-  # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
-  # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
-  favicon = "images/favicon.png"
-
   title = "서종호 포트폴리오"
 
   # This theme will, by default, inject a made-with-line at the bottom of the page.
