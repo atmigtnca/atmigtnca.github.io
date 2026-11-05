@@ -14,12 +14,8 @@ defaultContentLanguage = "ko"
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
 
-# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-disableKinds = ["taxonomy"]
-ignoreErrors = ["error-disable-taxonomy"]
-[permalinks]
-  blog = "/:slug/"
-  tags = "/blog/:slug"
+# 태그를 쓰지 않으므로 태그 목록 페이지를 만들지 않는다.
+disableKinds = ["taxonomy", "term"]
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
