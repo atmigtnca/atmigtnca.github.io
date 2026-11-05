@@ -322,3 +322,46 @@ td:first-child {
     font-weight: 700;
   }
 }
+
+/* 활동 목록 */
+.entries {
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--ink);
+}
+
+.entries > li {
+  margin: 0;
+  padding: 1.25rem 0 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.entries h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.entries h2 a {
+  color: var(--ink);
+}
+
+.entry-meta {
+  margin-bottom: 0.375rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 바닥글 */
+footer {
+  margin-top: 4rem;
+  padding-block: 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+footer p {
+  margin: 0 0 0.375rem;
+}
