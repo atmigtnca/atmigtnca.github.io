@@ -2,7 +2,7 @@
 title = "JPUShare"
 description = "연구실끼리 GPU를 나눠 쓰는 서비스. Slurm 작업을 Apptainer 컨테이너로 돌린다."
 date = 2026-10-01
-weight = 2
+weight = 3
 [params]
   period = "2026년 2학기부터"
   status = "진행 중"
