@@ -5,6 +5,24 @@
 - 사이트: https://atmigtnca.github.io/
 - 대표 활동: [JCloud 2026년 여름 재구축](https://atmigtnca.github.io/projects/jcloud-rebuild/)
 
+## 폴더 구조
+
+```text
+.
+├── .github/
+│   ├── workflows/hugo-pages.yml   # main push마다 빌드하고 Pages에 배포
+│   └── pages_build.py             # 의존성 준비와 빌드(수업 스크립트 사본)
+├── site/                          # 실제 Hugo 사이트
+│   ├── hugo.toml                  # 제목, 메뉴, 언어
+│   ├── pages.json                 # 배포 주소와 빌드 보안 설정(스크립트 생성)
+│   ├── content/                   # 글: 홈, 소개, 활동, 이 사이트에 대해
+│   ├── layouts/                   # 테마를 덮어쓴 화면 틀
+│   ├── assets/css/site.css        # 사이트 스타일
+│   ├── static/                    # favicon, 그림(SVG)
+│   └── themes/template/           # Bear Blog 테마 원본(고치지 않음)
+└── layouts/, exampleSite/ ...     # Download ZIP을 푼 테마 원본(빌드에 쓰지 않음)
+```
+
 ## 필요한 도구
 
 | 도구 | 버전 | 용도 |
@@ -51,7 +69,8 @@ ls public/index.html
 |---|---|
 | 홈 소개 글 | `site/content/_index.md` |
 | 소개 페이지 | `site/content/about.md` |
-| 활동 글 | `site/content/projects/*.md` (기간, 상태, 도구는 머리말 `[params]`) |
+| 활동 글 | `site/content/projects/*.md` (기간, 상태, 비고, 요약, 도구는 머리말 `[params]`, 목차는 `toc = true`) |
+| 전후 비교 그림 | `site/static/images/jcloud-*.svg`, 본문에서는 `compare` shortcode(`site/layouts/shortcodes/compare.html`) |
 | 사이트 제목, 메뉴, 설명 | `site/hugo.toml` |
 | 화면 구조 | `site/layouts/` (테마 파일을 같은 경로로 덮어쓴다) |
 | 색, 글꼴, 간격 | `site/assets/css/site.css` 맨 위 `:root` 변수 |
