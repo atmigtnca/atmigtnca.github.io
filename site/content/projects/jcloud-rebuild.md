@@ -49,7 +49,7 @@ JCloud는 OSLAB이 학생 실습과 연구용 VM을 내주는 OpenStack 클라�
 
 | 방식 | 내용 | 판단 |
 |---|---|---|
-| 서버에 직접 설치 + pacemaker/DRBD | 기존 방식 | 문제의 출발점이라 제외 |
+| 서버에 직접 설치 + pacemaker/DRBD | 기존 방식. 설정이 흩어진 문제의 출발점 | 제외 |
 | **Kolla-Ansible** | OpenStack 서비스를 컨테이너로 띄우고, 설정은 `globals.yml`과 Ansible 인벤토리에 코드로 둔다 | **채택** |
 | OpenStack-on-Kubernetes | 컨트롤 플레인을 쿠버네티스 파드로 운영한다 | 기각 |
 

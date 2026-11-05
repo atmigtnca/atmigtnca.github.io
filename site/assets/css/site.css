@@ -51,7 +51,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.8;
   word-break: keep-all;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 header,
