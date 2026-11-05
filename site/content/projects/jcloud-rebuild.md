@@ -3,6 +3,7 @@ title = "JCloud 2026년 여름 재구축"
 description = "연구실 프라이빗 클라우드 JCloud를 Kolla-Ansible, OpenStack Gazpacho, Ceph로 새로 짓고 기존 자원을 옮긴 기록"
 date = 2026-09-30
 weight = 1
+toc = true
 [params]
   period = "2026년 7월 ~ 9월"
   status = "완료"

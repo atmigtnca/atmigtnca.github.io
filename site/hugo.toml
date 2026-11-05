@@ -56,6 +56,10 @@ disableKinds = ["taxonomy", "term"]
 # Configure markup highlighter to match "Bearblog" aesthetics, see
 # https://gohugo.io/configuration/markup/#highlight
 [markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+    ordered = false
   [markup.highlight]
     style = 'friendly'
     lineNos = true
