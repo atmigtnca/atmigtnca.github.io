@@ -12,6 +12,7 @@
 ├── .github/
 │   ├── workflows/hugo-pages.yml   # main push마다 빌드하고 Pages에 배포
 │   └── pages_build.py             # 의존성 준비와 빌드(수업 스크립트 사본)
+├── tools/check-public.sh         # 빌드 결과 검사
 ├── site/                          # 실제 Hugo 사이트
 │   ├── hugo.toml                  # 제목, 메뉴, 언어
 │   ├── pages.json                 # 배포 주소와 빌드 보안 설정(스크립트 생성)
@@ -107,7 +108,7 @@ curl -s "https://api.github.com/repos/atmigtnca/atmigtnca.github.io/actions/runs
 | 테마 원본 | `site/themes/template/`, 저장소 루트의 `layouts/`, `exampleSite/`, `archetypes/`, `images/`, `theme.toml`, `package*.json`, `CONTRIBUTING.md`, `LICENSE` | [janraasch/hugo-bearblog](https://github.com/janraasch/hugo-bearblog) master ZIP(2026-10-08 기준). MIT License, © Jan Raasch. 루트 파일은 Download ZIP을 푼 그대로이고 `LICENSE`가 그 고지다 |
 | 수업 스크립트 생성 | `.github/workflows/hugo-pages.yml`, `.github/pages_build.py`, `.github-pages.json`, `site/pages.json`, `.gitignore`의 아래 절 | 초급프로젝트 수업 제공 `prepare_github_pages.py` 3.1 |
 | 직접 작성 | `site/content/` 글의 사실관계, 메뉴 구성, 공개할 정보와 뺄 정보 | 서종호. 경력과 날짜, 수치는 본인의 JCloud 운영 기록에서 가져왔다 |
-| AI와 함께 작성 | `site/layouts/`, `site/assets/css/site.css`, `site/static/images/*.svg`, `site/static/favicon.svg`, 이 README | 코딩 에이전트 OMO(Claude Opus 5.5)가 초안을 쓰고 서종호가 확인해 고쳤다. 디자인 점검에 impeccable(Apache 2.0)과 Anthropic frontend-design 스킬을 썼다 |
+| AI와 함께 작성 | `site/layouts/`, `site/assets/css/site.css`, `site/static/images/*.svg`, `site/static/favicon.svg`, `tools/check-public.sh`, 이 README | 코딩 에이전트 OMO(Claude Opus 5.5)가 초안을 쓰고 서종호가 확인해 고쳤다. 디자인 점검에 impeccable(Apache 2.0)과 Anthropic frontend-design 스킬을 썼다 |
 | 외부 글꼴 | IBM Plex Sans KR | Google Fonts에서 받는다. SIL Open Font License 1.1 |
 
 학번, 연락처, 내부 주소처럼 공개하지 않는 정보는 사이트와 저장소에 넣지 않는다.
