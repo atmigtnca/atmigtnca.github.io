@@ -1,117 +1,28 @@
-# Hugo ʕ•ᴥ•ʔ Bear Blog [![CI](https://github.com/janraasch/hugo-bearblog/actions/workflows/ci.yml/badge.svg)](https://github.com/janraasch/hugo-bearblog/actions/workflows/ci.yml)
+# atmigtnca.github.io
 
-🧸 A [Hugo](https://gohugo.io/)-theme based on [Bear Blog](https://bearblog.dev).
+서종호의 개인 포트폴리오 사이트 소스다. Hugo로 만들고 GitHub Actions가 GitHub Pages에 배포한다.
 
-> Free, no-nonsense, super-fast blogging.
+- 사이트: https://atmigtnca.github.io/
+- 대표 활동: [JCloud 2026년 여름 재구축](https://atmigtnca.github.io/projects/jcloud-rebuild/)
 
-## Demo
+## 필요한 도구
 
-For a current & working demo of this theme, please check out https://janraasch.github.io/hugo-bearblog/ 🎯.
+| 도구 | 버전 | 용도 |
+|---|---|---|
+| Hugo extended | 0.167.0 | 사이트 빌드. 워크플로도 같은 버전을 쓴다 |
+| Python | 3.12 (3.10 이상이면 된다) | `.github/pages_build.py` 실행 |
+| Git | 2.4x | 소스 관리 |
 
-## Screenshots
+Node, Go, Dart Sass는 이 테마에서 쓰지 않는다. 워크플로가 설치는 하지만 빌드에 쓰이지 않는다.
 
-⬜️ [Light][light-screenshot]
-
-⬛️ [Dark][dark-screenshot]
-
-When the user's browser is running »dark mode«, the dark color scheme will be used automatically. The default is the light/white color scheme. Check out the [`style.html`](https://github.com/janraasch/hugo-bearblog/blob/master/layouts/partials/style.html)-file for the implementation.
-
-## Installation
-
-If you already have a Hugo site on your machine, you can simply add this theme via
+### Hugo 설치 (Linux, 관리자 권한 없이)
 
 ```bash
-git submodule add https://github.com/janraasch/hugo-bearblog.git themes/hugo-bearblog
+mkdir -p ~/.local/opt/hugo-0.167.0 ~/.local/bin
+curl -fL https://github.com/gohugoio/hugo/releases/download/v0.167.0/hugo_extended_0.167.0_linux-amd64.tar.gz \
+  | tar -xz -C ~/.local/opt/hugo-0.167.0
+ln -sf ~/.local/opt/hugo-0.167.0/hugo ~/.local/bin/hugo
+hugo version   # hugo v0.167.0-...+extended
 ```
 
-Then, adjust the `hugo.toml` as detailed below.
-
-For more information, read the official [setup guide][hugo-setup-guide] of Hugo.
-
-## Adjust configuration / hugo.toml
-
-Please check out the [hugo.toml](https://github.com/janraasch/hugo-bearblog/blob/master/exampleSite/hugo.toml) included in the [exampleSite](https://github.com/janraasch/hugo-bearblog/tree/master/exampleSite) of this theme.
-
-## Content & structure
-
-### Starting fresh
-
-If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
-
-### Adding / editing content
-
-#### Index-Page
-
-The contents of the `index`-page may be changed by editing your `content/_index.md`-file.
-
-#### Page
-
-You can add **a new page** via running
-
-```bash
-hugo new my-new-page.md
-```
-
-#### Blog-Post
-
-You can add **a new blog-post** via running
-
-```bash
-hugo new blog/my-new-post.md
-```
-
-### Adding your branding / colors / css
-
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag, *or* you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Check out the [`style.html`](https://github.com/janraasch/hugo-bearblog/blob/master/layouts/partials/style.html)-file to find out which CSS-styles are applied by default.
-
-## Remixes 🎭
-
-The community has created some interesting variations of Hugo ʕ•ᴥ•ʔ Bear Blog. While the main theme stays true to the minimal Bear Blog philosophy, these remixes experiment with additional features:
-
-* [Hugo ʕ•ᴥ•ʔ Bear Blog ✨ Neo](https://github.com/rokcso/hugo-bearblog-neo/) - Features Chinese documentation and an innovative "Toast" upvote system.
-
-* [ᕦʕ •ᴥ•ʔᕤ Bear Cub](https://github.com/clente/hugo-bearcub) - A multilingual variant with experimental features like automatic social card generation.
-
-_Note: These are independent forks maintained by their respective creators._
-
-## Contributing & Community 🤝
-
-Interested in contributing to Hugo ʕ•ᴥ•ʔ Bear Blog? Thanks for your interest!
-
-- Check out our [Contributing Guidelines](CONTRIBUTING.md) for code contributions and bug reports
-- [Share your story](https://github.com/janraasch/hugo-bearblog/issues/new/choose) if you're using the theme - we'd love to see what you've built!
-- Have questions? You can find help in our [GitHub issues](https://github.com/janraasch/hugo-bearblog/issues) or the [Hugo Discourse](https://discourse.gohugo.io/)
-
-We aim to keep this theme as simple and fast as the original [Bear Blog](https://bearblog.dev), while making it a friendly space for everyone to contribute and share their experiences.
-
-## Development
-Run the `exampleSite` locally via
-
-```bash
-hugo server --source ./exampleSite --themesDir ../..
-```
-
-In case you want to test functionalities and use hugo commands, in the root directory, you'll have to append `--source ./exampleSite --themesDir ../..` to them.
-
-For example:
-
-```bash
-hugo new blog/post.md --source ./exampleSite --themesDir ../..
-```
-
-Same thing for pages:
-
-```bash
-hugo new page.md  --source ./exampleSite --themesDir ../..
-```
-
-## Special Thanks 🎁
-
-A special thank you goes out to [Herman](https://herman.bearblog.dev), for creating the original [ʕ•ᴥ•ʔ Bear Blog](https://bearblog.dev/).
-
-## License
-[MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
-
-[hugo-setup-guide]: https://gohugo.io/getting-started/installing
-[light-screenshot]: https://raw.githubusercontent.com/janraasch/hugo-bearblog/master/images/screenshot.png
-[dark-screenshot]: https://raw.githubusercontent.com/janraasch/hugo-bearblog/master/images/screenshot-dark.png
+Windows와 macOS는 [Hugo 설치 안내](https://gohugo.io/installation/)에서 extended 0.167.0을 받는다.
