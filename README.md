@@ -10,7 +10,7 @@
 | 도구 | 버전 | 용도 |
 |---|---|---|
 | Hugo extended | 0.167.0 | 사이트 빌드. 워크플로도 같은 버전을 쓴다 |
-| Python | 3.12 (3.10 이상이면 된다) | `.github/pages_build.py` 실행 |
+| Python | 3.9 이상 (워크플로는 3.12) | `.github/pages_build.py` 실행 |
 | Git | 2.4x | 소스 관리 |
 
 Node, Go, Dart Sass는 이 테마에서 쓰지 않는다. 워크플로가 설치는 하지만 빌드에 쓰이지 않는다.
@@ -26,3 +26,21 @@ hugo version   # hugo v0.167.0-...+extended
 ```
 
 Windows와 macOS는 [Hugo 설치 안내](https://gohugo.io/installation/)에서 extended 0.167.0을 받는다.
+
+## 빌드와 확인
+
+저장소 루트에서 실행한다.
+
+```bash
+# 1. 글을 고치면서 보기: 저장할 때마다 다시 그려진다
+cd site
+hugo server --config hugo.toml,pages.json --theme template --themesDir themes
+# 브라우저로 http://localhost:1313/ 을 연다. 끝낼 때는 Ctrl+C
+
+# 2. 배포와 같은 방식으로 빌드: 결과가 public/ 에 생긴다
+cd ..
+python3 .github/pages_build.py --build
+ls public/index.html
+```
+
+2번은 GitHub Actions가 실행하는 명령과 같다. 빌드 중 오류가 나면 `준비/빌드 중단:` 뒤에 원인이 나온다. 글 안의 링크는 `relref`로 걸어 두었기 때문에, 없는 페이지를 가리키면 빌드가 `REF_NOT_FOUND`로 멈춘다.
