@@ -54,3 +54,64 @@ svg {
 strong {
   font-weight: 700;
 }
+
+/* 건너뛰기 링크: 키보드 초점을 받을 때만 화면에 나온다 */
+.skip-link {
+  position: absolute;
+  left: var(--space);
+  top: -4rem;
+  z-index: 10;
+  padding: 0.5rem 0.875rem;
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* 머리글: 이름과 주요 메뉴 */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  padding-block: 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-name {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav a {
+  display: inline-block;
+  padding: 0.625rem 0.625rem;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--ink);
+}
+
+header nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
