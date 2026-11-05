@@ -1,15 +1,21 @@
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
-  {{- with .Params.period }}
+  {{- if or .Params.period .Params.status .Params.tools }}
   <dl class="record">
+    {{- with .Params.period }}
     <dt>기간</dt>
     <dd>{{ . }}</dd>
-    {{- with $.Params.status }}
-    <dt>상태</dt>
-    <dd><span class="status" data-state="{{ if eq . "완료" }}done{{ else }}ongoing{{ end }}">{{ . }}</span>{{ with $.Params.statusNote }} {{ . }}{{ end }}</dd>
     {{- end }}
-    {{- with $.Params.tools }}
+    {{- with .Params.status }}
+    <dt>상태</dt>
+    <dd><span class="status" data-state="{{ if eq . "완료" }}done{{ else }}ongoing{{ end }}">{{ . }}</span></dd>
+    {{- end }}
+    {{- with .Params.statusNote }}
+    <dt>비고</dt>
+    <dd>{{ . }}</dd>
+    {{- end }}
+    {{- with .Params.tools }}
     <dt>도구</dt>
     <dd>{{ . }}</dd>
     {{- end }}
