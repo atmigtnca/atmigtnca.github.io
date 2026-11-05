@@ -4,7 +4,7 @@ description = "연구실끼리 GPU를 나눠 쓰는 서비스. Slurm 작업을 A
 date = 2026-10-01
 weight = 2
 [params]
-  period = "2026년 2학기 ~"
+  period = "2026년 2학기부터"
   status = "진행 중"
   tools = "Slurm, Apptainer, Ceph RGW"
 +++

@@ -5,7 +5,7 @@ date = 2026-09-30
 weight = 1
 toc = true
 [params]
-  period = "2026년 7월 ~ 9월"
+  period = "2026년 7~9월"
   status = "완료"
   statusNote = "재구축과 이주는 8월 말에 끝났고, 모니터링과 사용자 화면 개선은 이어서 하고 있다."
   tools = "Kolla-Ansible, OpenStack Gazpacho(2026.1), Ceph Squid(cephadm), Ubuntu 24.04, Skyline"
