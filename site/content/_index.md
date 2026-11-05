@@ -1,27 +1,21 @@
 +++
-title = "Home"
-menu = "main"
-weight = 1
+title = "처음"
+description = "전북대학교 컴퓨터인공지능학부 서종호. OSLAB 학부연구생으로 연구실 프라이빗 클라우드 JCloud를 운영한다."
 +++
 
-# A match made in heaven
+# 서종호
 
-There is a website obesity crisis. Bloated websites full of scripts, ads, and trackers are slowing your readers down every time they try to read your well-crafted content.
+전북대학교 컴퓨터인공지능학부 2학년이고, 운영체제·가상화 시스템을 연구하는 OSLAB에서 학부연구생으로 일한다. 연구실이 수업과 연구에 쓰는 프라이빗 클라우드 **JCloud**를 운영한다.
 
-Hugo Bear Blog is all you need to build a fantastic and optimized site or blog. It works perfectly on **any** viewing device. All you need to focus on is writing good content.
+관심 분야는 운영체제와 클라우드 컴퓨팅이다. 서버에서 생긴 문제를 고치면 원인까지 글로 남겨 두는 편이고, 이 사이트도 그렇게 남긴 기록을 정리한 것이다.
 
-[Go to the original bear blog](https://bearblog.dev/).
+## 지금 하는 일
 
----
+- **JCloud 운영.** 2026년 여름에 OpenStack Gazpacho와 Ceph로 다시 지었고, 지금은 모니터링에 AI 에이전트를 붙여 점검 보고를 자동으로 만드는 일을 하고 있다.
+- **JPUShare(진행 중).** 연구실끼리 GPU를 나눠 쓰는 서비스다. Slurm에서 Apptainer 작업을 돌리고 저장소는 Ceph RGW를 쓴다.
 
-What happens when you combine the worlds' fastest, most lightweight static site generator with a design theme built to provide you with free, no-nonsense, super-fast blogging capabilities?
+## 대표 활동
 
-**Use this theme, and find out!**
+[JCloud 2026년 여름 재구축](projects/jcloud-rebuild/) — 2026년 7월부터 9월까지. 흩어진 수동 설정으로 운영하던 클라우드를 Kolla-Ansible과 Ceph 기반으로 새로 짓고 기존 자원을 옮겼다.
 
-Made with 💟 by [Jan Raasch](https://www.janraasch.com).
-
----
-
-Simply publish content online, grow an audience, and keep your pages tiny, fast, and **optimized for search engines**.
-
-Each page is ~5kb, and you can **host your blog yourself**.
+더 자세한 소개는 [소개](about/)에, 활동 목록은 [활동](projects/)에 있다.
