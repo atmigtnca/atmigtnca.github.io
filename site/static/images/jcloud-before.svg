@@ -1,20 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="'IBM Plex Sans KR', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
-  <rect width="400" height="416" fill="#ffffff"/>
-  <rect x="0" y="0" width="400" height="3" fill="#8a5300"/>
-  <text x="20" y="38" font-size="19" font-weight="700" fill="#18202b">재구축 전: OpenStack Antelope</text>
-  <rect x="16" y="56" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="28" y="80" font-size="13.5" fill="#4b5563">사용자 화면</text>
-  <text x="28" y="106" font-size="16.5" fill="#18202b">Horizon</text>
-  <rect x="16" y="126" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="28" y="150" font-size="13.5" fill="#4b5563">OpenStack 서비스</text>
-  <text x="28" y="176" font-size="16.5" fill="#18202b">서버마다 패키지를 직접 설치</text>
-  <rect x="16" y="196" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#8a5300" stroke-width="2"/>
-  <text x="28" y="220" font-size="13.5" fill="#4b5563">고가용성</text>
-  <text x="28" y="246" font-size="16.5" fill="#18202b">pacemaker + DRBD, 복제가 끊긴 상태</text>
-  <rect x="16" y="266" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#8a5300" stroke-width="2"/>
-  <text x="28" y="290" font-size="13.5" fill="#4b5563">설정</text>
-  <text x="28" y="316" font-size="16.5" fill="#18202b">노드별 /etc, pacemaker, 수동 백업에 분산</text>
-  <rect x="16" y="336" width="368" height="64" rx="3" fill="#f4f5f7" stroke="#cdd3db" stroke-width="1"/>
-  <text x="28" y="360" font-size="13.5" fill="#4b5563">VM 디스크</text>
-  <text x="28" y="386" font-size="16.5" fill="#18202b">서버마다 로컬 디스크(LVM, qcow2)</text>
+  <style>
+    .bg{fill:#ffffff}.box{fill:#f4f5f7;stroke:#cdd3db}.hot{stroke:#8a5300}.bar{fill:#8a5300}.v{fill:#18202b}.k{fill:#4b5563}
+    @media (prefers-color-scheme: dark){.bg{fill:#1c222b}.box{fill:#15191f;stroke:#364050}.hot{stroke:#e5ab55}.bar{fill:#e5ab55}.v{fill:#e6e9ee}.k{fill:#a9b2be}}
+  </style>
+  <rect class="bg" width="400" height="416"/>
+  <rect x="0" y="0" width="400" height="3" class="bar"/>
+  <text x="20" y="38" font-size="19" font-weight="700" class="v">재구축 전: OpenStack Antelope</text>
+  <rect x="16" y="56" width="368" height="64" rx="3" class="box" stroke-width="1"/>
+  <text x="28" y="80" font-size="13.5" class="k">사용자 화면</text>
+  <text x="28" y="106" font-size="16.5" class="v">Horizon</text>
+  <rect x="16" y="126" width="368" height="64" rx="3" class="box" stroke-width="1"/>
+  <text x="28" y="150" font-size="13.5" class="k">OpenStack 서비스</text>
+  <text x="28" y="176" font-size="16.5" class="v">서버마다 패키지를 직접 설치</text>
+  <rect x="16" y="196" width="368" height="64" rx="3" class="box hot" stroke-width="2"/>
+  <text x="28" y="220" font-size="13.5" class="k">고가용성</text>
+  <text x="28" y="246" font-size="16.5" class="v">pacemaker + DRBD, 복제가 끊긴 상태</text>
+  <rect x="16" y="266" width="368" height="64" rx="3" class="box hot" stroke-width="2"/>
+  <text x="28" y="290" font-size="13.5" class="k">설정</text>
+  <text x="28" y="316" font-size="16.5" class="v">노드별 /etc, pacemaker, 수동 백업에 분산</text>
+  <rect x="16" y="336" width="368" height="64" rx="3" class="box" stroke-width="1"/>
+  <text x="28" y="360" font-size="13.5" class="k">VM 디스크</text>
+  <text x="28" y="386" font-size="16.5" class="v">서버마다 로컬 디스크(LVM, qcow2)</text>
 </svg>
