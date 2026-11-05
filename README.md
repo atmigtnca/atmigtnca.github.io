@@ -44,3 +44,31 @@ ls public/index.html
 ```
 
 2번은 GitHub Actions가 실행하는 명령과 같다. 빌드 중 오류가 나면 `준비/빌드 중단:` 뒤에 원인이 나온다. 글 안의 링크는 `relref`로 걸어 두었기 때문에, 없는 페이지를 가리키면 빌드가 `REF_NOT_FOUND`로 멈춘다.
+
+## 어디를 고치나
+
+| 바꾸고 싶은 것 | 파일 |
+|---|---|
+| 홈 소개 글 | `site/content/_index.md` |
+| 소개 페이지 | `site/content/about.md` |
+| 활동 글 | `site/content/projects/*.md` (기간, 상태, 도구는 머리말 `[params]`) |
+| 사이트 제목, 메뉴, 설명 | `site/hugo.toml` |
+| 화면 구조 | `site/layouts/` (테마 파일을 같은 경로로 덮어쓴다) |
+| 색, 글꼴, 간격 | `site/assets/css/site.css` 맨 위 `:root` 변수 |
+| 배포 주소 | `site/pages.json`의 `baseURL` |
+
+`site/themes/template/`은 테마 원본이라 고치지 않는다. 바꿀 파일이 있으면 같은 경로로 `site/layouts/`에 복사해서 고친다.
+
+## 배포하고 확인하기
+
+1. 고친 뒤 위의 2번 빌드가 성공하는지 본다.
+2. `git add <파일>`, `git commit`, `git push origin main`
+3. 저장소의 [Actions 탭](https://github.com/atmigtnca/atmigtnca.github.io/actions)에서 방금 커밋으로 시작된 `Deploy Hugo to GitHub Pages` 실행을 연다. `build`와 `deploy` 두 작업이 모두 초록색 체크면 성공이다.
+4. https://atmigtnca.github.io/ 를 새로고침해 바뀐 내용을 확인한다. 브라우저 캐시 때문에 안 바뀌어 보이면 강력 새로고침(Ctrl+Shift+R)을 한다.
+
+명령줄에서는 공개 API로 최근 실행 결과를 볼 수 있다.
+
+```bash
+curl -s "https://api.github.com/repos/atmigtnca/atmigtnca.github.io/actions/runs?branch=main&per_page=1" \
+  | grep -m2 -E '"(status|conclusion)"'
+```
