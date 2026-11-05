@@ -7,7 +7,7 @@
   <li>
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{- with .Params.period }}
-    <p class="entry-meta">{{ . }}{{ with $p.Params.status }} <span class="status">{{ . }}</span>{{ end }}</p>
+    <p class="entry-meta">{{ . }}{{ with $p.Params.status }} <span class="status" data-state="{{ if eq . "완료" }}done{{ else }}ongoing{{ end }}">{{ . }}</span>{{ end }}</p>
     {{- end }}
     {{- with .Description }}<p>{{ . }}</p>{{ end }}
   </li>

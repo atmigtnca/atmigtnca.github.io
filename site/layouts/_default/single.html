@@ -7,7 +7,7 @@
     <dd>{{ . }}</dd>
     {{- with $.Params.status }}
     <dt>상태</dt>
-    <dd><span class="status">{{ . }}</span>{{ with $.Params.statusNote }} {{ . }}{{ end }}</dd>
+    <dd><span class="status" data-state="{{ if eq . "완료" }}done{{ else }}ongoing{{ end }}">{{ . }}</span>{{ with $.Params.statusNote }} {{ . }}{{ end }}</dd>
     {{- end }}
     {{- with $.Params.tools }}
     <dt>도구</dt>

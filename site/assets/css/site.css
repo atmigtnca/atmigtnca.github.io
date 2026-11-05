@@ -204,3 +204,54 @@ code {
   background: var(--surface);
   font-size: 0.9em;
 }
+
+/* 문서 정보: 변경 기록 머리처럼 항목과 값을 줄 맞춰 둔다 */
+.record {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  margin: 0 0 2rem;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.record dt,
+.record dd {
+  margin: 0;
+  padding: 0.625rem 0.875rem;
+}
+
+.record dt {
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+.record dt + dd ~ dt,
+.record dt + dd ~ dt + dd {
+  border-top: 1px solid var(--rule);
+}
+
+.status {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.4em;
+  vertical-align: 0.12em;
+  background: currentColor;
+}
+
+.status[data-state="done"] {
+  color: var(--done);
+}
+
+.status[data-state="ongoing"] {
+  color: var(--ongoing);
+}
