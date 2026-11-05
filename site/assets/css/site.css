@@ -1,0 +1,56 @@
+/* 서종호 포트폴리오 스타일. 테마(Bear Blog)의 인라인 스타일을 대신한다. */
+
+:root {
+  --paper: #f4f5f7;
+  --surface: #ffffff;
+  --ink: #18202b;
+  --ink-2: #4b5563;
+  --rule: #cdd3db;
+  --link: #135e83;
+  --done: #23663a;
+  --ongoing: #8a5300;
+
+  --font: "IBM Plex Sans KR", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --measure: 44rem;
+  --space: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+header,
+main,
+footer {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+strong {
+  font-weight: 700;
+}
