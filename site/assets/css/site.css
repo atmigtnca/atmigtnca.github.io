@@ -141,6 +141,7 @@ header nav a[aria-current="page"] {
 h1,
 h2,
 h3 {
+  scroll-margin-top: 1.5rem;
   color: var(--ink);
   line-height: 1.35;
   text-wrap: balance;
