@@ -17,6 +17,20 @@ enableRobotsTXT = true
 # 태그를 쓰지 않으므로 태그 목록 페이지를 만들지 않는다.
 disableKinds = ["taxonomy", "term"]
 
+[menus]
+  [[menus.main]]
+    name = "소개"
+    pageRef = "/about"
+    weight = 10
+  [[menus.main]]
+    name = "활동"
+    pageRef = "/projects"
+    weight = 20
+  [[menus.main]]
+    name = "이 사이트"
+    pageRef = "/colophon"
+    weight = 30
+
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "전북대학교 컴퓨터인공지능학부 학생 서종호의 포트폴리오. 연구실 프라이빗 클라우드 JCloud를 운영하고 2026년 여름에 다시 지은 기록을 정리했다."
