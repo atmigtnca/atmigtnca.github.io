@@ -61,6 +61,14 @@ python3 .github/pages_build.py --build
 ls public/index.html
 ```
 
+빌드한 뒤에는 결과물에 남으면 안 되는 것이 없는지 검사한다.
+
+```bash
+bash tools/check-public.sh   # 모두 "통과"면 종료 코드 0, 하나라도 "실패"면 1
+```
+
+개인 PC 주소(localhost, 127.0.0.1, file://), HTTP로 불러오는 자산, 내부 IP, 빈 링크(`href="#"`), `lang=ko`가 없는 페이지를 찾는다.
+
 2번은 GitHub Actions가 실행하는 명령과 같다. 빌드 중 오류가 나면 `준비/빌드 중단:` 뒤에 원인이 나온다. 글 안의 링크는 `relref`로 걸어 두었기 때문에, 없는 페이지를 가리키면 빌드가 `REF_NOT_FOUND`로 멈춘다.
 
 ## 어디를 고치나
