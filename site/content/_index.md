@@ -13,9 +13,3 @@ description = "전북대학교 컴퓨터인공지능학부 서종호. OSLAB 학�
 
 - **JCloud 운영.** 2026년 여름에 OpenStack Gazpacho와 Ceph로 다시 지었고, 지금은 모니터링에 AI 에이전트를 붙여 점검 보고를 자동으로 만드는 일을 하고 있다.
 - **JPUShare(진행 중).** 연구실끼리 GPU를 나눠 쓰는 서비스다. Slurm에서 Apptainer 작업을 돌리고 저장소는 Ceph RGW를 쓴다.
-
-## 대표 활동
-
-[JCloud 2026년 여름 재구축]({{< relref "projects/jcloud-rebuild" >}}) — 2026년 7월부터 9월까지. 흩어진 수동 설정으로 운영하던 클라우드를 Kolla-Ansible과 Ceph 기반으로 새로 짓고 기존 자원을 옮겼다.
-
-더 자세한 소개는 [소개]({{< relref "about" >}})에, 활동 목록은 [활동]({{< relref "projects" >}})에 있다.

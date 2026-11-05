@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ .Content }}
+{{- with site.GetPage "/projects/jcloud-rebuild" }}
+<section aria-labelledby="featured">
+  <h2 id="featured">대표 활동</h2>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <dl class="record">
+    <dt>기간</dt>
+    <dd>{{ .Params.period }}</dd>
+    <dt>상태</dt>
+    <dd><span class="status" data-state="{{ if eq .Params.status "완료" }}done{{ else }}ongoing{{ end }}">{{ .Params.status }}</span></dd>
+    <dt>내용</dt>
+    <dd>{{ .Description }}</dd>
+  </dl>
+</section>
+{{- end }}
+<p>더 자세한 소개는 <a href="{{ "about/" | relURL }}">소개</a>에, 활동 목록은 <a href="{{ "projects/" | relURL }}">활동</a>에 있다.</p>
+{{ end }}
