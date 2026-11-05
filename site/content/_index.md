@@ -11,5 +11,4 @@ description = "전북대학교 컴퓨터인공지능학부 서종호. OSLAB 학�
 
 ## 지금 하는 일
 
-- **JCloud 운영.** 2026년 여름에 OpenStack Gazpacho와 Ceph로 다시 지었고, 지금은 모니터링에 AI 에이전트를 붙여 점검 보고를 자동으로 만드는 일을 하고 있다.
-- **JPUShare(진행 중).** 연구실끼리 GPU를 나눠 쓰는 서비스다. Slurm에서 Apptainer 작업을 돌리고 저장소는 Ceph RGW를 쓴다.
+여름에 다시 지은 이 클라우드를 운영하면서, 모니터링에 AI 에이전트를 붙여 점검 보고를 자동으로 만드는 일을 하고 있다. 함께 맡은 JPUShare는 연구실끼리 GPU를 나눠 쓰는 서비스로, Slurm에서 Apptainer 작업을 돌리고 저장소는 Ceph RGW를 쓴다. JPUShare는 아직 만드는 중이다.
