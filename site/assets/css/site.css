@@ -10,9 +10,26 @@
   --done: #23663a;
   --ongoing: #8a5300;
 
+  --selection: #cfe3ee;
+  color-scheme: light dark;
+
   --font: "IBM Plex Sans KR", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --measure: 44rem;
   --space: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #15191f;
+    --surface: #1c222b;
+    --ink: #e6e9ee;
+    --ink-2: #a9b2be;
+    --rule: #364050;
+    --link: #82c4e3;
+    --done: #74c98f;
+    --ongoing: #e5ab55;
+    --selection: #23465a;
+  }
 }
 
 *,
@@ -193,7 +210,7 @@ main:focus {
 }
 
 ::selection {
-  background: #cfe3ee;
+  background: var(--selection);
   color: var(--ink);
 }
 
