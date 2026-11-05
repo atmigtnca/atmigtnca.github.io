@@ -8,6 +8,7 @@ toc = true
   period = "2026년 7~9월"
   status = "완료"
   statusNote = "재구축과 이주는 8월 말에 끝났고, 모니터링과 사용자 화면 개선은 이어서 하고 있다."
+  summary = "흩어진 수동 설정으로 운영하던 클라우드를 Kolla-Ansible과 Ceph로 새로 짓고, 8월 말까지 기존 VM과 사용자를 모두 옮긴 뒤 옛 클라우드를 해체했다."
   tools = "Kolla-Ansible, OpenStack Gazpacho(2026.1), Ceph Squid(cephadm), Ubuntu 24.04, Skyline"
 +++
 

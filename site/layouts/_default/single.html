@@ -15,6 +15,10 @@
     <dt>비고</dt>
     <dd>{{ . }}</dd>
     {{- end }}
+    {{- with .Params.summary }}
+    <dt>요약</dt>
+    <dd>{{ . }}</dd>
+    {{- end }}
     {{- with .Params.tools }}
     <dt>도구</dt>
     <dd>{{ . }}</dd>
